@@ -1,1 +1,22 @@
+import random
 
+
+print('Старт')
+
+talk = {
+    'привет':['Привет','Здравствуйте'],
+    'как дела':['Хорошо','Прекрасно'],
+    'пока':['До свидания','До завтра']
+    }
+
+def start_bot():
+    while True:
+        ans = input().lower()
+        if ans in talk:
+            print(random.choice(talk[ans]))
+            if ans == 'пока':
+                break
+        else:
+            print('Не знаю такой команды')
+
+start_bot()
